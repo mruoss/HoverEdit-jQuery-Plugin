@@ -1,6 +1,6 @@
 # HoverEdit jQuery Plugin
 
-HoverEdit can be used to create forms where fields are edited and saved individually like user account forms or similar. You won't need a <form>-Tag or submit button any more. Form elements are saved as soon as the cursor leaves.
+HoverEdit can be used to create forms where fields are edited and saved individually like user account forms or similar. You won't need a &lt;form&gt;-Tag or submit button any more. Form elements are saved as soon as the cursor leaves.
 
 This plugin does not save any data. It only provides the GUI frontend. Whoever uses it has to provide an ajax backend to store the values.
 
