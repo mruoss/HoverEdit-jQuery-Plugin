@@ -1,0 +1,115 @@
+$font-size: 11px
+
+=hover_edit_hovered()
+	.hover-edit-element
+		display: block
+
+	.hover-edit-value
+		display: none
+
+	.edit
+		display: block
+
+=hover_edit_focus()
+	.save,
+	.cancel
+		display: block
+	.edit
+		display: none
+	input.hover-edit-element,
+	textarea.hover-edit-element
+		background-color: #fff
+		width: 170px
+		padding: 0.3em 50px 0.3em 0.3em
+
+
+
+
+.hover-edit-wrapper
+	display: block
+	position: relative
+	overflow: hidden
+
+	.save,
+	.cancel,
+	.edit
+		cursor: pointer
+		z-index: 100
+
+	.hover-edit-value
+		white-space: pre-wrap
+		line-height: 13px
+		border: 1px solid #ccc
+		font-size: $font-size
+
+	.hover-edit-element
+		resize: none
+		margin: 0
+		background-color: #efefef
+		font-size: $font-size
+		border: 1px solid #ccc
+		option
+			line-height: 13px
+
+	input.hover-edit-element,
+	textarea.hover-edit-element,
+	.hover-edit-value
+		width: 195px
+		padding: 0.3em 25px 0.3em 0.3em
+
+	select.hover-edit-element
+		padding: 0.3em 0.3em 0.3em 0em
+		width: 225px
+
+	.hover-edit-element,
+	.save,
+	.cancel,
+	.edit,
+	.loading
+		display: none
+
+	.edit
+		width: 20px
+		height: 20px
+		background: transparent image_url('edit.png') no-repeat scroll 0 0
+		top: 1px
+		right: 8px
+		position: absolute
+	.save
+		width: 20px
+		height: 20px
+		background: transparent image_url('save.png') no-repeat scroll 0 0
+		top: 1px
+		right: 25px
+		position: absolute
+	.cancel
+		width: 20px
+		height: 20px
+		background: transparent image_url('cancel.png') no-repeat scroll 0 0
+		top: 1px
+		right: 8px
+		position: absolute
+	.loading
+		width: 20px
+		height: 20px
+		background: transparent image_url('loading.gif') no-repeat scroll 0 0
+		right: 8px
+		top: 1px
+		position: absolute
+
+
+.hover-edit-wrapper.saving
+	.loading
+		display: block
+	.save,
+	.cancel,
+	.edit
+		display: none !important
+
+.hover-edit-wrapper:hover
+	+hover_edit_hovered
+
+.hover-edit-wrapper.focus
+	+hover_edit_hovered
+	+hover_edit_focus
+
