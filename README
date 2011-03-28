@@ -1,0 +1,32 @@
+HoverEdit is a jQuery Plugin by Michael Ruoss
+
+(c) Copyright 2011, Michael Ruoss <michael.ruoss@ufirstgroup.com>
+
+JQuery plugin for on-hover form elements. Your form elements will be displayed
+as normal text until the user hovers with the mouse over them. On mouse over,
+the actual form element gets visible and the normal text disappears.
+
+After changing the value in the form element, press enter, tab or just
+klick somewhere outside the field to trigger the save callback function
+which has to be provided by the caller.
+Pressing ESCAPE will cancel the modification.
+
+Use class 'input-required' to force non-empty input validation.
+
+Events:
+  The plugins defines and triggers custom events on the form element:
+  error.input-required: Is triggered if the user tries to empty a
+                        required field. The caller of the plugin has
+                        to handle errors e.g. display an error message.
+
+Example:
+  HTML:
+    <input type="text" name="first_name" class="hover-edit input-required"/>
+
+  Javascript:
+    jQuery('.hover-edit').hoveredit({
+        saveCallback: function(wrapper, form_element, old_value){ do some ajax here and then call this.hoveredit('success') or this.hoveredit('cancel')};
+    });
+
+@author: Michael Ruoss <michael.ruoss@ufirstgroup.com>
+

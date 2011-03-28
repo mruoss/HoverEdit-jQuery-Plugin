@@ -1,5 +1,3 @@
-$font-size: 11px
-
 =hover_edit_hovered()
 	.hover-edit-element
 		display: block
@@ -23,8 +21,6 @@ $font-size: 11px
 		padding: 0.3em 50px 0.3em 0.3em
 
 
-
-
 .hover-edit-wrapper
 	display: block
 	position: relative
@@ -38,18 +34,16 @@ $font-size: 11px
 
 	.hover-edit-value
 		white-space: pre-wrap
-		line-height: 13px
+		line-height: 14px
 		border: 1px solid #ccc
-		font-size: $font-size
 
 	.hover-edit-element
 		resize: none
 		margin: 0
 		background-color: #efefef
-		font-size: $font-size
 		border: 1px solid #ccc
 		option
-			line-height: 13px
+			line-height: 14px
 
 	input.hover-edit-element,
 	textarea.hover-edit-element,
@@ -73,38 +67,30 @@ $font-size: 11px
 		height: 20px
 		background: transparent image_url('edit.png') no-repeat scroll 0 0
 		top: 1px
-		right: 8px
+		right: 5px
 		position: absolute
 	.save
 		width: 20px
 		height: 20px
 		background: transparent image_url('save.png') no-repeat scroll 0 0
 		top: 1px
-		right: 25px
+		right: 22px
 		position: absolute
 	.cancel
 		width: 20px
 		height: 20px
 		background: transparent image_url('cancel.png') no-repeat scroll 0 0
 		top: 1px
-		right: 8px
+		right: 5px
 		position: absolute
 	.loading
 		width: 20px
 		height: 20px
 		background: transparent image_url('loading.gif') no-repeat scroll 0 0
-		right: 8px
+		right: 5px
 		top: 1px
 		position: absolute
 
-
-.hover-edit-wrapper.saving
-	.loading
-		display: block
-	.save,
-	.cancel,
-	.edit
-		display: none !important
 
 .hover-edit-wrapper:hover
 	+hover_edit_hovered
@@ -112,4 +98,15 @@ $font-size: 11px
 .hover-edit-wrapper.focus
 	+hover_edit_hovered
 	+hover_edit_focus
+
+.hover-edit-wrapper.saving
+	.loading
+		display: block
+	.save,
+	.cancel,
+	.edit,
+	.hover-edit-element
+		display: none !important
+	.hover-edit-value
+		display: block !important
 

@@ -1,48 +1,46 @@
-/* line 28, ../css_src/styles.sass */
+/* line 24, ../css_src/styles.sass */
 .hover-edit-wrapper {
   display: block;
   position: relative;
   overflow: hidden;
 }
-/* line 33, ../css_src/styles.sass */
+/* line 29, ../css_src/styles.sass */
 .hover-edit-wrapper .save,
 .hover-edit-wrapper .cancel,
 .hover-edit-wrapper .edit {
   cursor: pointer;
   z-index: 100;
 }
-/* line 39, ../css_src/styles.sass */
+/* line 35, ../css_src/styles.sass */
 .hover-edit-wrapper .hover-edit-value {
   white-space: pre-wrap;
-  line-height: 13px;
+  line-height: 14px;
   border: 1px solid #cccccc;
-  font-size: 11px;
 }
-/* line 45, ../css_src/styles.sass */
+/* line 40, ../css_src/styles.sass */
 .hover-edit-wrapper .hover-edit-element {
   resize: none;
   margin: 0;
   background-color: #efefef;
-  font-size: 11px;
   border: 1px solid #cccccc;
 }
-/* line 51, ../css_src/styles.sass */
+/* line 45, ../css_src/styles.sass */
 .hover-edit-wrapper .hover-edit-element option {
-  line-height: 13px;
+  line-height: 14px;
 }
-/* line 54, ../css_src/styles.sass */
+/* line 48, ../css_src/styles.sass */
 .hover-edit-wrapper input.hover-edit-element,
 .hover-edit-wrapper textarea.hover-edit-element,
 .hover-edit-wrapper .hover-edit-value {
   width: 195px;
   padding: 0.3em 25px 0.3em 0.3em;
 }
-/* line 60, ../css_src/styles.sass */
+/* line 54, ../css_src/styles.sass */
 .hover-edit-wrapper select.hover-edit-element {
   padding: 0.3em 0.3em 0.3em 0em;
   width: 225px;
 }
-/* line 64, ../css_src/styles.sass */
+/* line 58, ../css_src/styles.sass */
 .hover-edit-wrapper .hover-edit-element,
 .hover-edit-wrapper .save,
 .hover-edit-wrapper .cancel,
@@ -50,92 +48,97 @@
 .hover-edit-wrapper .loading {
   display: none;
 }
-/* line 71, ../css_src/styles.sass */
+/* line 65, ../css_src/styles.sass */
 .hover-edit-wrapper .edit {
   width: 20px;
   height: 20px;
-  background: transparent url('../images/edit.png?1301327191') no-repeat scroll 0 0;
+  background: transparent url('../images/edit.png?1301336464') no-repeat scroll 0 0;
   top: 1px;
-  right: 8px;
+  right: 5px;
   position: absolute;
 }
-/* line 78, ../css_src/styles.sass */
+/* line 72, ../css_src/styles.sass */
 .hover-edit-wrapper .save {
   width: 20px;
   height: 20px;
-  background: transparent url('../images/save.png?1301327197') no-repeat scroll 0 0;
+  background: transparent url('../images/save.png?1301336464') no-repeat scroll 0 0;
   top: 1px;
-  right: 25px;
+  right: 22px;
   position: absolute;
 }
-/* line 85, ../css_src/styles.sass */
+/* line 79, ../css_src/styles.sass */
 .hover-edit-wrapper .cancel {
   width: 20px;
   height: 20px;
-  background: transparent url('../images/cancel.png?1301327204') no-repeat scroll 0 0;
+  background: transparent url('../images/cancel.png?1301336464') no-repeat scroll 0 0;
   top: 1px;
-  right: 8px;
+  right: 5px;
   position: absolute;
 }
-/* line 92, ../css_src/styles.sass */
+/* line 86, ../css_src/styles.sass */
 .hover-edit-wrapper .loading {
   width: 20px;
   height: 20px;
-  background: transparent url('../images/loading.gif?1301327216') no-repeat scroll 0 0;
-  right: 8px;
+  background: transparent url('../images/loading.gif?1301336464') no-repeat scroll 0 0;
+  right: 5px;
   top: 1px;
   position: absolute;
 }
 
-/* line 102, ../css_src/styles.sass */
-.hover-edit-wrapper.saving .loading {
-  display: block;
-}
-/* line 104, ../css_src/styles.sass */
-.hover-edit-wrapper.saving .save,
-.hover-edit-wrapper.saving .cancel,
-.hover-edit-wrapper.saving .edit {
-  display: none !important;
-}
-
-/* line 4, ../css_src/styles.sass */
+/* line 2, ../css_src/styles.sass */
 .hover-edit-wrapper:hover .hover-edit-element {
   display: block;
 }
-/* line 7, ../css_src/styles.sass */
+/* line 5, ../css_src/styles.sass */
 .hover-edit-wrapper:hover .hover-edit-value {
   display: none;
 }
-/* line 10, ../css_src/styles.sass */
+/* line 8, ../css_src/styles.sass */
 .hover-edit-wrapper:hover .edit {
   display: block;
 }
 
-/* line 4, ../css_src/styles.sass */
+/* line 2, ../css_src/styles.sass */
 .hover-edit-wrapper.focus .hover-edit-element {
   display: block;
 }
-/* line 7, ../css_src/styles.sass */
+/* line 5, ../css_src/styles.sass */
 .hover-edit-wrapper.focus .hover-edit-value {
   display: none;
 }
-/* line 10, ../css_src/styles.sass */
+/* line 8, ../css_src/styles.sass */
 .hover-edit-wrapper.focus .edit {
   display: block;
 }
-/* line 14, ../css_src/styles.sass */
+/* line 12, ../css_src/styles.sass */
 .hover-edit-wrapper.focus .save,
 .hover-edit-wrapper.focus .cancel {
   display: block;
 }
-/* line 17, ../css_src/styles.sass */
+/* line 15, ../css_src/styles.sass */
 .hover-edit-wrapper.focus .edit {
   display: none;
 }
-/* line 19, ../css_src/styles.sass */
+/* line 17, ../css_src/styles.sass */
 .hover-edit-wrapper.focus input.hover-edit-element,
 .hover-edit-wrapper.focus textarea.hover-edit-element {
   background-color: white;
   width: 170px;
   padding: 0.3em 50px 0.3em 0.3em;
+}
+
+/* line 103, ../css_src/styles.sass */
+.hover-edit-wrapper.saving .loading {
+  display: block;
+}
+/* line 105, ../css_src/styles.sass */
+.hover-edit-wrapper.saving .save,
+.hover-edit-wrapper.saving .cancel,
+.hover-edit-wrapper.saving .edit,
+.hover-edit-wrapper.saving .hover-edit-element {
+  display: none !important;
+}
+/* line 110, ../css_src/styles.sass */
+.hover-edit-wrapper.saving .hover-edit-value {
+  display: block !important;
 }

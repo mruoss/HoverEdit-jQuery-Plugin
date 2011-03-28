@@ -31,5 +31,7 @@ This plugin does not save any data. It only provides the GUI frontend. Whoever u
 
 # Additional Plugins
 
-- Use [**autoresize jQuery plugin**]: http://james.padolsey.com/javascript/jquery-plugin-autoresize/ "Autoresize jQuery plugin" for textareas
+- Use **[Autoresize]**
+
+[Autoresize]: http://james.padolsey.com/javascript/jquery-plugin-autoresize/ "Autoresize jQuery plugin" for textareas
 

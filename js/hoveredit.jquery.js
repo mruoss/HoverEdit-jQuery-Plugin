@@ -1,35 +1,7 @@
 /**
- * HoverEdit is a jQuery Plugin by Michael Ruoss
+ * HoverEdit is a jQuery Plugin
  *
  * (c) Copyright 2011, Michael Ruoss <michael.ruoss@ufirstgroup.com>
- *
- * JQuery plugin for on-hover form elements. Your form elements will be displayed
- * as normal text until the user hovers with the mouse over them. On mouse over,
- * the actual form element gets visible and the normal text disappears.
- *
- * After changing the value in the form element, press enter, tab or just
- * klick somewhere outside the field to trigger the save callback function
- * which has to be provided by the caller.
- * Pressing ESCAPE will cancel the modification.
- *
- * Use class 'input-required' to force non-empty input validation.
- *
- * Events:
- *   The plugins defines and triggers custom events on the form element:
- *   error.input-required: Is triggered if the user tries to empty a
- *                         required field. The caller of the plugin has
- *                         to handle errors e.g. display an error message.
- *
- * Example:
- *   HTML:
- *     <input type="text" id="nickname" name="nickname" value="#user.username#" class="hover-edit input-required"/>
- *
- *   Javascript:
- *     jQuery('.hover-edit').hoveredit({
- *         saveCallback: function(){ do some ajax here and then call this.hoveredit('success') or this.hoveredit('cancel')};
- *     });
- *
- * @author: Michael Ruoss <michael.ruoss@ufirstgroup.com>
  */
 
 
@@ -179,7 +151,7 @@
 			methods._copyValue.apply(this);
 			form_element.attr('disabled', 'disabled');
 			if (typeof settings.saveCallback == 'function') {
-				settings.saveCallback.apply(this, [form_element, old_value])
+				settings.saveCallback.apply(this, [this, form_element, old_value])
 			} else {
 				methods.success.apply(this);
 			}
@@ -218,7 +190,9 @@
 		var form_element = this.form_element;
 		var form_value = this.children('.hover-edit-value:first');
 		this.removeClass('saving')
-		form_element.removeAttr('disabled');
+		form_element
+		    .removeAttr('disabled')
+		    .css('display', '');
 	};
 
 	/**
@@ -246,6 +220,8 @@
 
 		if (form_element.is('select')) {
 			form_value.text(form_element.find('option:selected').text());
+		} else if(form_element.is('input[type="password"]')) {
+		    form_value.text('***********');
 		} else {
 			form_value.text(form_element.val());
 		}
