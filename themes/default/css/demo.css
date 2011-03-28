@@ -1,0 +1,18 @@
+/* line 3, ../css_src/demo.sass */
+body {
+  font-size: 12px;
+  background-color: #e4e6f4;
+}
+/* line 6, ../css_src/demo.sass */
+body p, body input, body textarea {
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+/* line 9, ../css_src/demo.sass */
+body h1 {
+  font-size: 200%;
+}
+/* line 11, ../css_src/demo.sass */
+body label {
+  font-weight: bold;
+}
